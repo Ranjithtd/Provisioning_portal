@@ -1,0 +1,23 @@
+{% extends "mytemplate.html"%}
+
+{% block bodycontent%}
+        <div class="login-form">
+        <h1>Login Here</h1>
+
+<form action="/validate" method="post">
+    <p>User Name</p> 
+    <input type="textname" name="uname" placeholder="User Name" required>
+    <p>Password</p>
+    <input type="password" name="pw" placeholder="password" required>
+    <br>
+    <br>
+    <button type="submit">Login</button>
+</form>
+<br>
+<br>
+<a href="/newuser">New User? Register Here</a>
+            
+        </div>
+    
+    </div>  
+{% endblock %}

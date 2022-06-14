@@ -1,0 +1,64 @@
+{% extends "mytemplate.html"%}
+
+{% block bodycontent%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/client.css') }}">
+           <div class="container">
+            <div class="title">Add New Client</div>
+            <form action="/newclient" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                <p>Customer Name</p>
+                    <input type="text" name="cname" placeholder="Customer name" required>
+                </div>
+
+                <div class="input-box">
+                <p>Location</p>
+                    <input type="text" name="loc" placeholder="Location" required>
+                </div>
+
+                <div class="input-box">
+                <p>Email</p>
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-box">
+                <p>Phone</p>
+                    <input type="number" name="phone" placeholder="Phone" required>
+                </div>
+
+                <div class="input-box">
+                <p>CPU</p>
+                    <input type="text" name="cpu" placeholder="CPU" required>
+                </div>
+
+                <div class="input-box">
+                <p>Storage</p>
+                    <input type="number" name="storage" placeholder="Storage" required>
+                </div>
+
+                <div class="input-box">
+                <p>Memory</p>
+                    <input type="number" name="memory" placeholder="Memory" required>
+                </div>
+
+                <div class="input-box">
+                <p>Assigned To</p>
+                    <input type="text" name="assignto" placeholder="Assigned To" required>
+                </div>
+                </div>
+                <br>
+                <br>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+	
+            

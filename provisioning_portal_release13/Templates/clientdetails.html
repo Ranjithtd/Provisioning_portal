@@ -1,0 +1,39 @@
+{% extends "mytemplate.html"%}
+
+{% block bodycontent%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/client.css') }}">
+<br>
+<br>
+<div class="view-details">
+            <h1>Client Details</h1>
+        </div>
+<br>
+<table class="content-table">
+    <thead>
+    <tr>
+        <th>Customer Name</th>
+        <th>Service Request ID</th>
+        <th>Location</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>CPU</th>
+        <th>Storage</th>
+        <th>Memory</th>
+        <th>Assigned To</th>
+    </tr>
+    {% for each_record in my_data : %}
+    <tr>
+        <td>{{each_record.0}}</td>
+        <td>{{each_record[1]}}</td>
+        <td>{{each_record[2]}}</td>
+        <td>{{each_record[3]}}</td>
+        <td>{{each_record[4]}}</td>
+        <td>{{each_record[5]}}</td>
+        <td>{{each_record[6]}}</td>
+        <td>{{each_record[7]}}</td>
+        <td>{{each_record[8]}}</td>
+    </tr>
+    {% endfor %}
+    </thead>
+</table>
+{% endblock %}

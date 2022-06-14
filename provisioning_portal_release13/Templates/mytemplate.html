@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>
+            My website portal
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+    <div class="banner">
+        <header>
+        <div class="navbar">
+        <img src="{{ url_for('static', filename='images/584e8d0f6a5ae41a83ddee3d.png')}}"  width="150px"
+    cursor="pointer">
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+
+            {% if session.username : %}
+                <li><a href="/newclient">Add Newclient</a></li>
+                <li><a href="/clientdetails">view clients</a></li>
+                <li><a href="/logout">logout</a></li>
+            {% else : %}
+                <li><a href="/newuser">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            {% endif %}
+
+            </ul>
+        </div>
+    </header>
+    </div>
+    <body background="static/images/css-backgrounds.jpg" style="background-size: cover;">
+
+{% block bodycontent%}
+{% endblock %}
+
+    <div class="footer">
+    <p>Privacy policy </p>
+    <p>@Copyright 1999-2022, Provisioning portal</p>
+
+    </div>
+
+    
+</body>
+
+</html>
